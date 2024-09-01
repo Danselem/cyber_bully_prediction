@@ -1,4 +1,4 @@
-# Cyberbullying Detection
+# Cyber Bully Prediction
 
 An end-to-end machine learning project with Terraform, MLflow, Prefect, Docker, AWS (EC2, Lambda, S3, Kinesis, ECR, IAM), Evidently AI, Grafana and much more!
 
@@ -14,11 +14,11 @@ This project intends to promote proactive efforts towards combatting this by cre
 
 ### Objective
 
-The project will create a stream Machine Learning Operations (MLOps) pipeline that processes the tweet data. The data will be retrieved from tweet API, sent to AWS Lambda to process. The Lambda function will retrieve model artifacts from AWS S3, and perform the classification, return the class of tweets to the classification streams. System can consume this classification stream to flag potentially harmful tweets and send warnings to users. 
+The project will create a stream Machine Learning Operations (MLOps) pipeline that processes the tweet data. The data will be retrieved from tweet API, sent to AWS Lambda to process. The Lambda function will retrieve model artifacts from AWS S3, and perform the classification, return the class of tweets to the classification streams. System can consume this classification stream to flag potentially harmful tweets and send warnings to users.
 
 ### Dataset
 
-The tweets data which will be used to train the machine learning model is obtained from [Kaggle](https://www.kaggle.com/datasets/andrewmvd/cyberbullying-classification/). Over 47,000 tweets have been categorized in this dataset based on the following categories: Age, Ethnicity, Gender, Religion, Other sort of cyberbullying, and Not cyberbullying. There are about 8,000 of each class in the data since it has been balanced. **Warning:** You should only read these tweets to the extent that you feel safe because they either depict bullying incidents or are the offense itself. 
+The tweets data which will be used to train the machine learning model is obtained from [Kaggle](https://www.kaggle.com/datasets/andrewmvd/cyberbullying-classification/). Over 47,000 tweets have been categorized in this dataset based on the following categories: Age, Ethnicity, Gender, Religion, Other sort of cyberbullying, and Not cyberbullying. There are about 8,000 of each class in the data since it has been balanced. **Warning:** You should only read these tweets to the extent that you feel safe because they either depict bullying incidents or are the offense itself.
 
 ### Tools & Technologies
 
