@@ -4,6 +4,7 @@
 
 
 .venv
+.env
 venv
 .idea
 **/artifacts/

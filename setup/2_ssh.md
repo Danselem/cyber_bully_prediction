@@ -21,8 +21,8 @@ Copy the following snippet and replace with External IP of the Virtual Machine. 
 ```bash
 Host cyberbully
     HostName <ec2_public_ip>
-    User ubuntu
-    IdentityFile ~/.ssh/cyberbully.pem
+    User ec2-user
+    IdentityFile ~/.ssh/cyber.pem
     StrictHostKeyChecking no
 ```
 
