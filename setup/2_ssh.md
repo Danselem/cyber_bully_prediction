@@ -2,7 +2,7 @@
 
 The first few minutes of [this video by Alexey](https://www.youtube.com/watch?v=IXSiYkP23zo) is recommended for understanding how it's done. You can then follow the below steps.
 
-Launch a new EC2 instance. An Ubuntu OS (Ubuntu Server 24.04 LTS (HVM), SSD Volume Type, Architecture 64-bit (x86)) and a t2.large instance type, a 30Gb gp2 storage are recommended. 
+Launch a new EC2 instance. An Amazon Linux 2023 AMI, SSD Volume Type, Architecture 64-bit (x86)) and a t2.large instance type, a 30Gb gp2 storage are recommended. 
 
 **Note** - Billing will start as soon as the instance is created and run.
 
@@ -39,8 +39,8 @@ You will have to forward ports from your VM to your local machine for you to be 
 Make sure `make` and `git` are installed on the EC2 instance. If not, install them using the following command:
 
 ```bash
-sudo apt update
-sudo apt install -y make git
+sudo yum update
+sudo yum install -y make git
 ```
 
 Clone the repository in your virtual machine.
