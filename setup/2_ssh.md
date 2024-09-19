@@ -21,7 +21,7 @@ Copy the following snippet and replace with External IP of the Virtual Machine. 
 ```bash
 Host cyberbully
     HostName <ec2_public_ip>
-    User ec2-user
+    User ubuntu
     IdentityFile ~/.ssh/cyber.pem
     StrictHostKeyChecking no
 ```
@@ -39,8 +39,8 @@ You will have to forward ports from your VM to your local machine for you to be 
 Make sure `make` and `git` are installed on the EC2 instance. If not, install them using the following command:
 
 ```bash
-sudo yum update
-sudo yum install -y make git
+sudo apt update
+sudo apt install -y make git
 ```
 
 Clone the repository in your virtual machine.

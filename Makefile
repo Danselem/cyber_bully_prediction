@@ -3,14 +3,14 @@ setup_ec2:
 	exec newgrp docker
 
 LOCAL_TAG:=$(shell date +"%Y-%m-%d-%H-%M")
-LOCAL_IMAGE_NAME:=stream-model-cyberbullying-detection:${LOCAL_TAG}
+LOCAL_IMAGE_NAME:=stream-model-cyberbully_prediction:${LOCAL_TAG}
 
 unit_tests:
 	echo "Perform unit tests..."
 	pytest tests/unit_tests
 
 build: unit_tests
-	cd ~/cyberbullying_detection/deployment && \
+	cd ~/cyber_bully_prediction/deployment && \
 	docker build -t ${LOCAL_IMAGE_NAME} .
 
 tests: build
