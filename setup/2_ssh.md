@@ -46,7 +46,7 @@ sudo yum install -y make git
 Clone the repository in your virtual machine.
 
 ```bash
-git clone https://github.com/voduyquoc/cyber_bully_prediction.git && \
+git https://github.com/Danselem/cyber_bully_prediction.git && \
 cd cyber_bully_prediction
 ```
 
