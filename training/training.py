@@ -16,7 +16,11 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import CountVectorizer
 from prefect import flow, task, get_run_logger
+from pathlib import Path
 
+nltk.download('punkt')
+nltk.download('wordnet')
+nltk.download('omw-1.4')
 
 @task(name="Load Data", log_prints=True, retries=3, retry_delay_seconds=2)
 def load_data(path):
@@ -129,7 +133,6 @@ def train_lr_model(X, y):
         logger.info("Logging the model...")
         
         mlflow.set_tag("model", "Logistic Regression")
-
         mlflow.sklearn.log_model(pipeline, "model")
         mlflow.log_metric("test_accuracy", test_acc)
 
@@ -296,7 +299,7 @@ def main_flow():
     logger.info("Starting flow...")
 
     # MLflow settings
-    S3_BUCKET_NAME = "mlops-zoomcamp-cyberbullying"
+    S3_BUCKET_NAME = "tf-cyberbully"
     MLFLOW_TRACKING_URI = 'http://127.0.0.1:5000'
     EXPERIMENT_NAME = "Training Model"
     mlflow.set_tracking_uri(MLFLOW_TRACKING_URI)
@@ -304,7 +307,8 @@ def main_flow():
     client = MlflowClient()
 
     # Load the data
-    df = load_data("data/cyberbullying_tweets.csv")
+    data_path = "../data/cyberbullying_tweets.csv"
+    df = load_data(data_path)
 
     # Clean the text
     X_train, y_train = prepare_data(df)

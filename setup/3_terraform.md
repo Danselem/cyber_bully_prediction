@@ -2,16 +2,16 @@
 
 Create a [S3 bucket](https://docs.aws.amazon.com/AmazonS3/latest/userguide/creating-bucket.html) named: `tf-user-cyberbully`
 ```bash
-aws s3api create-bucket --bucket tf-user-cyberbully --region <your-default-aws-region> --create-bucket-configuration LocationConstraint=<your-default-aws-region>
+aws s3api create-bucket --bucket tf-user-cyberbully --region us-east-1 
 ```
-
+terraform init -reconfigure
 Change directory to the `terraform` folder.
 
 ```bash
 cd ~/cyber_bully_prediction/terraform
 ```
 
-You will edit `your-default-aws-region` in the file `variables.tf`. Use the same values throughout the project. 
+You will edit `your-default-aws-region` in the file `variables.tf`. Use the same values throughout the project. Also edit `terraform/vars/prod.tfvars` and `terraform/vars/stg.tfvars`.
 
 Initiate terraform and download the required dependencies-
 

@@ -1,6 +1,6 @@
 variable "aws_region" {
   description = "AWS region to create resources"
-  default     = "us-west-2b"
+  default     = "us-east-1"
 }
 
 variable "project_id" {

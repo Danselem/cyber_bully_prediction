@@ -4,7 +4,7 @@ terraform {
   backend "s3" {
     bucket  = "tf-user-cyberbully"
     key     = "tf-user-cyberbully-stg.tfstate"
-    region  = "us-west-2b"
+    region  = "us-east-1"
     encrypt = true
   }
 }

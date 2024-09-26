@@ -15,7 +15,7 @@ cd ~/cyber_bully_prediction/training
 
 Run the following to start the mlflow tracking server
 ```bash
-mlflow server --backend-store-uri sqlite:///mlflow.db --default-artifact-root=s3://cyber_bully_prediction/
+mlflow server --backend-store-uri sqlite:///mlflow.db --default-artifact-root=s3://tf-cyberbully/
 ```
 
 Run `prefect` server
